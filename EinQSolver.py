@@ -31,7 +31,7 @@ rulesA = [
     "4_PM+2_BIRD",
     "1_YELLOW+4_DH",
     "4_BM+3_BEER",
-    "0_GR+4_PR",
+    "0_GR+4_PR"
 ]
 
 rulesB = [
@@ -39,11 +39,11 @@ rulesB = [
     "2_HORSE=LR|4_DH",#خونه ای که اسب داره سمت راست یا چپ خونه ای قرار داره که دان-هیل میکشه
     "1_GREEN=L|1_WHITE",#خانه سبز سمت چپ خانه سفید قرار دارد
     "0_GR=LR|1_BLUE",
-    "4_BL=LR|3_BEER",
+    "4_BL=LR|3_BEER"
 ]
 
 
-#make a case
+#ساخت یک راه حل اولیه
 def make():
     solution = [["NR", "", "", "", ""], ["", "", "", "", ""],
                 ["", "", "", "MILK", ""], ["", "", "", "", ""],
@@ -117,9 +117,9 @@ def filler(remained_data_to_fill_empty_cells,colomn_to_fill):
                 break
 
 
-#Fill empty cells
-#human list is full - NR, DN, GR, EN, SU
-#I should fill colors. YELLOW, RED and GREEN are selected. I should Select between BLUE and WHITE
+#خب با لیست اول قوانین یک راه حل ساختم حالا باید اینجا جاهای خالی رو پر کنم
+#با توجه به شرایط نقاط کاندید برای خونه های سبز، قرمز و زرد مشخص شده بود
+#دو خونه باقی مونده بود که باید آبی یا سفید باشد
 filler(["BLUE","WHITE"],1)
 filler(["HORSE","CAT","FISH"],2)
 filler(["UNKNOWN"],3)
