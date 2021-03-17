@@ -2,7 +2,7 @@
 
 import random
 #what we have at all???
-data = [
+[#just for knowing - i do not use this
     ["EN", "SU", "DN", "NR", "GR"],  ##human
     ["GREEN", "WHITE", "RED", "BLUE", "YELLOW"],  ##color of houses
     ["BIRD", "HORSE", "DOG", "CAT", "FISH"],  ##pet
@@ -39,6 +39,8 @@ def make():
                 ["", "", "", "", ""]]
     return solution
 
+def rnd(q):#q=5 -> return 0-4
+    return random.randint(0, q) - 1 
 
 s = []
 
@@ -50,7 +52,7 @@ def firstRules():
     while True:  #0-4
         r = rulesA[i]
         while True:
-            n = random.randint(0, 5) - 1  #(1-5)-1 => (0-4)
+            n = rnd(5)
             lIdx = int(r.split("+")[0].split("_")[0])
             lVal = r.split("+")[0].split("_")[1]
             rIdx = int(r.split("+")[1].split("_")[0])
@@ -71,7 +73,7 @@ def firstRules():
             break
     return True
 
-
+#find a solution with defined rules
 while True:
     ret = firstRules()
     if ret:
@@ -82,3 +84,17 @@ for ss in s:
     print(ss)
 
 #Fill empty cells
+#human list is full - NR, DN, GR, EN, SU
+#I should fill colors. YELLOW, RED and GREEN are selected. I should Select between BLUE and WHITE
+remained=["BLUE","WHITE"]
+while len(remained)>0:
+    x=remained.pop();
+    while True:
+        n=rnd(5)
+        if s[n][1]=="":
+            s[n][1]=x
+            break
+
+print("________________")  
+for ss in s:
+    print(ss)
