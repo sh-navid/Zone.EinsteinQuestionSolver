@@ -4,14 +4,17 @@ import json
 
 #what we have at all???
 
-_people=["EN","SU","DN","NR","GR"]
+_h=["EN","SU","DN","NR","GR"]##human
 
-_colors=["Green","White","Red","Blue","Yellow"]
+_c=["Green","White","Red","Blue","Yellow"]##color
 
-_pets=["Bird","Horse","Dog","Cat","Fish"]
+_p=["Bird","Horse","Dog","Cat","Fish"]##pet
 
-_drink=["Beer","Milk","Coffee","Tea","UNKNOWN"]
+_d=["Beer","Milk","Coffee","Tea","UNKNOWN"]##drink
 
-_sigaret=["DH","PR","BL","PM","UNKNOWN2"]
+_s=["DH","PR","BL","PM","UNKNOWN2"]##sigaret
 
-print(_people)
+print(_h)
+
+#Rules
+
