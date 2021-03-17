@@ -1,7 +1,5 @@
 #By Navid Shamshirsaz
 
-import json
-
 #what we have at all???
 
 _h=["EN","SU","DN","NR","GR"]##human
