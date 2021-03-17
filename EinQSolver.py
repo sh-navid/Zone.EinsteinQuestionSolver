@@ -6,9 +6,9 @@ _h=["EN","SU","DN","NR","GR"]##human
 
 _c=["GREEN","WHITE","RED","BLUE","YELLOW"]##color of houses
 
-_p=["Bird","Horse","Dog","Cat","Fish"]##pet
+_p=["BIRD","HORSE","DOG","CAT","FISH"]##pet
 
-_d=["Beer","Milk","Coffee","Tea","UNKNOWN"]##drink
+_d=["BEER","MILK","COFFEE","TEA","UNKNOWN"]##drink
 
 _s=["DH","PR","BL","PM","UNKNOWN2"]##sigaret
 
@@ -17,5 +17,7 @@ print(_h)
 #Rules
 
 rules=[
-    "EN+"
+    "EN+RED",
+    "SU+DOG",
+
 ]
