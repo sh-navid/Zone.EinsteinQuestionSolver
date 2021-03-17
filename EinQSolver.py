@@ -35,9 +35,9 @@ rulesA = [
 ]
 
 rulesB = [
-    "4_BL=LR|2_CAT",  #The house of whom smokes BL is Left or Right side of House with a CAT
-    "2_HORSE=LR|4_DH",
-    "1_GREEN=L|1_WHITE",
+    "4_BL=LR|2_CAT", #خونه ای که بلندز میکشه سمت چپ یا راست  خونه ای قرار داره که گربه داره
+    "2_HORSE=LR|4_DH",#خونه ای که اسب داره سمت راست یا چپ خونه ای قرار داره که دان-هیل میکشه
+    "1_GREEN=L|1_WHITE",#خانه سبز سمت چپ خانه سفید قرار دارد
     "0_GR=LR|1_BLUE",
     "4_BL=LR|3_BEER",
 ]
