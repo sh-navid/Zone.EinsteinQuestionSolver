@@ -1,7 +1,9 @@
 #By Navid Shamshirsaz
+#IF YOU NEED COMMENTS IN ENGLISH JUST COMMENT ON ONE OF MY ACCOUNTS OR SUBMIT AN ISSUE
+#نوشته شده توسط نوید شمشیرساز
 
 import random
-#what we have at all???
+#
 [#just for knowing - i do not use this
     ["EN", "SU", "DN", "NR", "GR"],  ##human
     ["GREEN", "WHITE", "RED", "BLUE", "YELLOW"],  ##color of houses
