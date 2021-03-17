@@ -28,3 +28,16 @@ rules=[
     "GR=LR|BLUE",
     "BL=LR|BEER",
 ]
+
+#make a case
+def make():
+    solution=[
+        ["NR","","","",""],
+        ["","","","",""],
+        ["","","MILK","",""],
+        ["","","","",""],
+        ["","","","",""]
+    ]
+    return solution
+
+s=make()
