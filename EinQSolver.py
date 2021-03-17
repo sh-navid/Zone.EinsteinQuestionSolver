@@ -1,4 +1,5 @@
 #By Navid Shamshirsaz
+#github.com/sh-navid
 #IF YOU NEED COMMENTS IN ENGLISH JUST TELL ME ON ONE OF MY ACCOUNTS OR SUBMIT AN ISSUE
 #نوشته شده توسط نوید شمشیرساز
 
@@ -53,8 +54,12 @@ def make():
 def rnd(q):#q=5 -> return 0-4
     return random.randint(0, q) - 1 
 
+#یک راه حل خالی ساختم
 s = []
 
+#با این تابع یه راه حل رو با توجه به لیست اول قوانین پر میکنم
+#یعنی یک سری مکان کاندید انتحاب و پیدا میکنم که معلوم نیست
+#آیا مکان درستی هستن یا نه - خب این بعدا معلوم میشه
 def firstRules():
     global s
     s = make()
