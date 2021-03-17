@@ -19,5 +19,8 @@ print(_h)
 rules=[
     "EN+RED",
     "SU+DOG",
-
+    "DN+TEA",
+    "GREEN+COFFEE",
+    "GREEN=|WHITE|-1",
+    "PM+BIRD",
 ]
