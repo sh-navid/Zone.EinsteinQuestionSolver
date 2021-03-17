@@ -10,7 +10,7 @@ _p=["BIRD","HORSE","DOG","CAT","FISH"]##pet
 
 _d=["BEER","MILK","COFFEE","TEA","UNKNOWN"]##drink
 
-_s=["DH","PR","BL","PM","UNKNOWN2"]##sigaret
+_s=["DH","PR","BL","BM","UNKNOWN2"]##sigaret
 
 print(_h)
 
@@ -23,8 +23,13 @@ rules=[
     "SU+DOG",
     "DN+TEA",
     "GREEN+COFFEE",
-    "GREEN=|WHITE|-1",
+    "GREEN=L|WHITE",
     "PM+BIRD",
     "YELLOW+DH",
-    
+    "BL=LR|CAT",#The house of whom smokes BL is Left or Right side of House with a CAT
+    "HORSE=LR|DH",
+    "BM+BEER",
+    "GR+PR",
+    "GR=LR|BLUE",
+    "BL=LR|BEER",
 ]
