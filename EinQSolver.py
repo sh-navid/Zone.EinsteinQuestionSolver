@@ -4,7 +4,7 @@
 
 _h=["EN","SU","DN","NR","GR"]##human
 
-_c=["Green","White","Red","Blue","Yellow"]##color
+_c=["GREEN","WHITE","RED","BLUE","YELLOW"]##color of houses
 
 _p=["Bird","Horse","Dog","Cat","Fish"]##pet
 
@@ -17,5 +17,5 @@ print(_h)
 #Rules
 
 rules=[
-    
+    "EN+"
 ]
