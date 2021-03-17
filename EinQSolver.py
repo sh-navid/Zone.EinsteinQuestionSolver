@@ -83,6 +83,28 @@ while True:
 for ss in s:
     print(ss)
 
+#فکر کنم فارسی کامنت بزارم بهتره - خودم هم گیج شدم دارم چکار میکنم
+#انیشتین یک سری قوانین مشخص کرده بود
+#من این قوانین رو به سه دسته تقسیم بندی کرده بودم
+#دسته اول اونایی بودن که ثابت بودن
+#مثلا صاحب خونه وسطی همیشه شیر میخوره
+#یا فرد نروژی همواره تو خونه اوله
+#سری دوم قوانین ایتمهایی بود که تو یک خونه مشترکن
+#مثلا مرد انگلیسی تو خونه قرمز خواهد بود
+#خب حالا سری سوم قوانین مونده اما اول نیازه تا جاهای خالی تو راه حل پر بشن
+#خیلی خب این تابع به من کمک میکنه جاهای خالی رو پر کنم
+#اوکی الان فارسی نوشتم خودم بیشتر فهمیدم دارم چکار میکنم
+#باید تو سبک کامنت نوشتن یکم تجدید نظر کنم
+def filler(remained_data_to_fill_empty_cells,colomn_to_fill):
+    #remained_data_to_fill_empty_cells=["BLUE","WHITE"]
+    while len(remained_data_to_fill_empty_cells)>0:
+        x=remained_data_to_fill_empty_cells.pop();
+        while True:
+            n=rnd(5)
+            if s[n][colomn_to_fill]=="":
+                s[n][colomn_to_fill]=x
+                break
+
 
 #Fill empty cells
 #human list is full - NR, DN, GR, EN, SU
