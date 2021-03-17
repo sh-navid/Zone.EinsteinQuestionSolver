@@ -1,5 +1,6 @@
 #By Navid Shamshirsaz
 
+import random
 #what we have at all???
 _h=["EN","SU","DN","NR","GR"]##human
 
@@ -11,20 +12,23 @@ _d=["BEER","MILK","COFFEE","TEA","UNKNOWN"]##drink
 
 _s=["DH","PR","BL","BM","UNKNOWN2"]##sigaret
 
-rules=[
+rulesA=[
     #MILK SHOULD BE IN CENTER HOUSE - DO THIS RULE SOMEWHERE ELSE
     #NR SHOULD N+BE IN FIRST HOUSE - DO THIS RULE SOMEWHERE ELSE
     "EN+RED",
     "SU+DOG",
     "DN+TEA",
     "GREEN+COFFEE",
-    "GREEN=L|WHITE",
     "PM+BIRD",
     "YELLOW+DH",
-    "BL=LR|CAT",#The house of whom smokes BL is Left or Right side of House with a CAT
-    "HORSE=LR|DH",
     "BM+BEER",
     "GR+PR",
+]
+
+rulesB=[
+    "BL=LR|CAT",#The house of whom smokes BL is Left or Right side of House with a CAT
+    "HORSE=LR|DH",
+    "GREEN=L|WHITE",
     "GR=LR|BLUE",
     "BL=LR|BEER",
 ]
@@ -41,3 +45,9 @@ def make():
     return solution
 
 s=make()
+for r in rulesA:
+    n=random.randint(0, 5)-1;#(1-5)-1 => (0-4)
+    
+
+
+
