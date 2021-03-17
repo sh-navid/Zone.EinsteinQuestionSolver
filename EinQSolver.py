@@ -2,11 +2,13 @@
 
 import random
 #what we have at all???
-_0 = ["EN", "SU", "DN", "NR", "GR"]  ##human
-_1 = ["GREEN", "WHITE", "RED", "BLUE", "YELLOW"]  ##color of houses
-_2 = ["BIRD", "HORSE", "DOG", "CAT", "FISH"]  ##pet
-_3 = ["BEER", "MILK", "COFFEE", "TEA", "UNKNOWN"]  ##drink
-_4 = ["DH", "PR", "BL", "BM", "PM"]  ##sigaret
+data = [
+    ["EN", "SU", "DN", "NR", "GR"],  ##human
+    ["GREEN", "WHITE", "RED", "BLUE", "YELLOW"],  ##color of houses
+    ["BIRD", "HORSE", "DOG", "CAT", "FISH"],  ##pet
+    ["BEER", "MILK", "COFFEE", "TEA", "UNKNOWN"],  ##drink
+    ["DH", "PR", "BL", "BM", "PM"]  ##sigaret
+]
 
 rulesA = [
     #MILK SHOULD BE IN CENTER HOUSE - DO THIS RULE SOMEWHERE ELSE
@@ -32,34 +34,27 @@ rulesB = [
 
 #make a case
 def make():
-    solution = [
-        ["NR", "", "", "", ""], 
-        ["", "", "", "", ""],
-        ["", "", "", "MILK", ""], 
-        ["", "", "", "", ""],
-        ["", "", "", "", ""]
-        ]
+    solution = [["NR", "", "", "", ""], ["", "", "", "", ""],
+                ["", "", "", "MILK", ""], ["", "", "", "", ""],
+                ["", "", "", "", ""]]
     return solution
 
 
-s = make()
-
+s = []
 
 def firstRules():
     global s
     s = make()
     counter = 0
-    i=0
+    i = 0
     while True:  #0-4
         r = rulesA[i]
         while True:
-            n = random.randint(0, 5) - 1 #(1-5)-1 => (0-4)
+            n = random.randint(0, 5) - 1  #(1-5)-1 => (0-4)
             lIdx = int(r.split("+")[0].split("_")[0])
             lVal = r.split("+")[0].split("_")[1]
             rIdx = int(r.split("+")[1].split("_")[0])
             rVal = r.split("+")[1].split("_")[1]
-        
-
 
             if s[n][lIdx] == "" and s[n][rIdx] == "":
                 s[n][lIdx] = lVal
@@ -71,8 +66,8 @@ def firstRules():
                     print(lIdx, lVal, rIdx, rVal)
                     print("error - rematch")
                     return False
-        i+=1
-        if i==8:
+        i += 1
+        if i == 8:
             break
     return True
 
@@ -86,7 +81,4 @@ while True:
 for ss in s:
     print(ss)
 
-counter = 0
-for i in range(0, 5):  #0-4
-
-    pass
+#Fill empty cells
