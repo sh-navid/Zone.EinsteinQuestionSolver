@@ -17,10 +17,14 @@ print(_h)
 #Rules
 
 rules=[
+    #MILK SHOULD BE IN CENTER HOUSE - DO THIS RULE SOMEWHERE ELSE
+    #NR SHOULD N+BE IN FIRST HOUSE - DO THIS RULE SOMEWHERE ELSE
     "EN+RED",
     "SU+DOG",
     "DN+TEA",
     "GREEN+COFFEE",
     "GREEN=|WHITE|-1",
     "PM+BIRD",
+    "YELLOW+DH",
+    
 ]
