@@ -6,7 +6,7 @@ _0 = ["EN", "SU", "DN", "NR", "GR"]  ##human
 _1 = ["GREEN", "WHITE", "RED", "BLUE", "YELLOW"]  ##color of houses
 _2 = ["BIRD", "HORSE", "DOG", "CAT", "FISH"]  ##pet
 _3 = ["BEER", "MILK", "COFFEE", "TEA", "UNKNOWN"]  ##drink
-_4 = ["DH", "PR", "BL", "BM", "UNKNOWN2"]  ##sigaret
+_4 = ["DH", "PR", "BL", "BM", "PM"]  ##sigaret
 
 rulesA = [
     #MILK SHOULD BE IN CENTER HOUSE - DO THIS RULE SOMEWHERE ELSE
@@ -15,7 +15,7 @@ rulesA = [
     "0_SU+2_DOG",
     "0_DN+3_TEA",
     "1_GREEN+3_COFFEE",
-    "4_BM+2_BIRD",
+    "4_PM+2_BIRD",
     "1_YELLOW+4_DH",
     "4_BM+3_BEER",
     "0_GR+4_PR",
@@ -53,12 +53,14 @@ def firstRules():
     while True:  #0-4
         r = rulesA[i]
         while True:
-            n = random.randint(0, 5) - 1
-            #(1-5)-1 => (0-4)
+            n = random.randint(0, 5) - 1 #(1-5)-1 => (0-4)
             lIdx = int(r.split("+")[0].split("_")[0])
             lVal = r.split("+")[0].split("_")[1]
             rIdx = int(r.split("+")[1].split("_")[0])
             rVal = r.split("+")[1].split("_")[1]
+        
+
+
             if s[n][lIdx] == "" and s[n][rIdx] == "":
                 s[n][lIdx] = lVal
                 s[n][rIdx] = rVal
