@@ -109,41 +109,10 @@ def filler(remained_data_to_fill_empty_cells,colomn_to_fill):
 #Fill empty cells
 #human list is full - NR, DN, GR, EN, SU
 #I should fill colors. YELLOW, RED and GREEN are selected. I should Select between BLUE and WHITE
-remained=["BLUE","WHITE"]
-while len(remained)>0:
-    x=remained.pop();
-    while True:
-        n=rnd(5)
-        if s[n][1]=="":
-            s[n][1]=x
-            break
-
-remained=["HORSE","CAT","FISH"]
-while len(remained)>0:
-    x=remained.pop();
-    while True:
-        n=rnd(5)
-        if s[n][2]=="":
-            s[n][2]=x
-            break
-
-remained=["UNKNOWN"]
-while len(remained)>0:
-    x=remained.pop();
-    while True:
-        n=rnd(5)
-        if s[n][3]=="":
-            s[n][3]=x
-            break
-
-remained=["BL"]
-while len(remained)>0:
-    x=remained.pop();
-    while True:
-        n=rnd(5)
-        if s[n][4]=="":
-            s[n][4]=x
-            break
+filler(["BLUE","WHITE"],1)
+filler(["HORSE","CAT","FISH"],2)
+filler(["UNKNOWN"],3)
+filler(["BL"],4)
 
 print("________________")  
 for ss in s:
