@@ -17,7 +17,7 @@ rulesA = [
     "1_GREEN+3_COFFEE",
     "4_BM+2_BIRD",
     "1_YELLOW+4_DH",
-    "4_BM+4_BEER",
+    "4_BM+3_BEER",
     "0_GR+4_PR",
 ]
 
@@ -32,9 +32,13 @@ rulesB = [
 
 #make a case
 def make():
-    solution = [["NR", "", "", "", ""], ["", "", "", "", ""],
-                ["", "", "MILK", "", ""], ["", "", "", "", ""],
-                ["", "", "", "", ""]]
+    solution = [
+        ["NR", "", "", "", ""], 
+        ["", "", "", "", ""],
+        ["", "", "", "MILK", ""], 
+        ["", "", "", "", ""],
+        ["", "", "", "", ""]
+        ]
     return solution
 
 
@@ -42,9 +46,11 @@ s = make()
 
 
 def firstRules():
+    global s
     s = make()
     counter = 0
-    for i in range(0, 8):  #0-4
+    i=0
+    while True:  #0-4
         r = rulesA[i]
         while True:
             n = random.randint(0, 5) - 1
@@ -53,17 +59,19 @@ def firstRules():
             lVal = r.split("+")[0].split("_")[1]
             rIdx = int(r.split("+")[1].split("_")[0])
             rVal = r.split("+")[1].split("_")[1]
-            ss = s[n]
-            if ss[lIdx] == "" and ss[rIdx] == "":
-                ss[lIdx] = lVal
-                ss[rIdx] = rVal
+            if s[n][lIdx] == "" and s[n][rIdx] == "":
+                s[n][lIdx] = lVal
+                s[n][rIdx] = rVal
                 break
             else:
                 counter += 1
                 if (counter > 100):
                     print(lIdx, lVal, rIdx, rVal)
-                    print("error")
+                    print("error - rematch")
                     return False
+        i+=1
+        if i==8:
+            break
     return True
 
 
