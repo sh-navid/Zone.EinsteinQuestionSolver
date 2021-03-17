@@ -3,13 +3,16 @@
 #نوشته شده توسط نوید شمشیرساز
 
 import random
-#
-[#just for knowing - i do not use this
-    ["EN", "SU", "DN", "NR", "GR"],  ##human
-    ["GREEN", "WHITE", "RED", "BLUE", "YELLOW"],  ##color of houses
-    ["BIRD", "HORSE", "DOG", "CAT", "FISH"],  ##pet
-    ["BEER", "MILK", "COFFEE", "TEA", "UNKNOWN"],  ##drink
-    ["DH", "PR", "BL", "BM", "PM"]  ##sigaret
+#خب تصمیم گرفتم همون فارسی توضیح بدم خودم هم گیج نشم دارم چی مینویسم
+#این کل برداشت من از جملات انیشتین هست
+#فکر نمیکنم چیزی رو جا انداخته باشم
+#من با این دیتا بصورت مستقیم کاری ندارم فقط بصورت کلی میخوام بدونم پارامترها چی هستن
+[
+    ["EN", "SU", "DN", "NR", "GR"],  ##ادم ها و ملیتشون
+    ["GREEN", "WHITE", "RED", "BLUE", "YELLOW"],  ##رنگ خونه ها
+    ["BIRD", "HORSE", "DOG", "CAT", "FISH"],  ##حیوانات خانگی
+    ["BEER", "MILK", "COFFEE", "TEA", "UNKNOWN"],  ##نوشیدنی ها، یدونه مشخص نبود اصلا
+    ["DH", "PR", "BL", "BM", "PM"]  ##برند سیگارها
 ]
 
 rulesA = [
