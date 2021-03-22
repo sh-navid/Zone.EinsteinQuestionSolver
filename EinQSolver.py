@@ -36,8 +36,10 @@ rulesA = [
     "0_GR+4_PR"
 ]
 
-rulesB = [
-    "4_BL=LR|2_CAT",  #خونه ای که بلندز میکشه سمت چپ یا راست  خونه ای قرار داره که گربه داره
+#این لیست دوم قوانین
+#این لیست هم پارسر نداره میخوام خودم تک تک بررسیشون کنم. فقط جهت اطلاع نوشتم
+[
+    "4_BL=LR|2_CAT",  #خونه ای که بلندز میکشه سمت چپ یا راست خونه ای قرار داره که گربه داره
     "2_HORSE=LR|4_DH",  #خونه ای که اسب داره سمت راست یا چپ خونه ای قرار داره که دان-هیل میکشه
     "1_GREEN=L|1_WHITE",  #خانه سبز سمت چپ خانه سفید قرار دارد
     "0_GR=LR|1_BLUE",
@@ -92,6 +94,13 @@ def firstRules():
         if i == 8:
             break
     return True
+
+def find(item,column):
+    for idx in range(0,5):
+        if s[idx][column]==item:
+            return idx
+    return "ERROR"
+        
 
 PROGRAM_ENDED=False
 while not PROGRAM_ENDED:
@@ -148,5 +157,17 @@ while not PROGRAM_ENDED:
 
     #چند روزی حوصله نداشتم بنویسمش تا امروز
     #3/22/2021
+
+    rowA=find("BL",4);
+    rowB=find("CAT",2);
+    if abs(rowA-rowB) !=1:
+        PROGRAM_ENDED=False
+        continue
+
+    rowA=find("HORSE",2);
+    rowB=find("DH",4);
+    if abs(rowA-rowB) !=1:
+        PROGRAM_ENDED=False
+        continue
 
     PROGRAM_ENDED=True
