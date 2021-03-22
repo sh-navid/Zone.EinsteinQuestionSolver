@@ -158,14 +158,32 @@ while not PROGRAM_ENDED:
     #چند روزی حوصله نداشتم بنویسمش تا امروز
     #3/22/2021
 
-    rowA=find("BL",4);
-    rowB=find("CAT",2);
+    rowA=find("BL",4)
+    rowB=find("CAT",2)
     if abs(rowA-rowB) !=1:
         PROGRAM_ENDED=False
         continue
 
-    rowA=find("HORSE",2);
-    rowB=find("DH",4);
+    rowA=find("HORSE",2)
+    rowB=find("DH",4)
+    if abs(rowA-rowB) !=1:
+        PROGRAM_ENDED=False
+        continue
+
+    rowA=find("GREEN",1)
+    rowB=find("WHITE",1)
+    if rowA!=rowB-1:
+        PROGRAM_ENDED=False
+        continue
+
+    rowA=find("GR",0)
+    rowB=find("BLUE",1)
+    if abs(rowA-rowB) !=1:
+        PROGRAM_ENDED=False
+        continue
+
+    rowA=find("BL",4)
+    rowB=find("BEER",3)
     if abs(rowA-rowB) !=1:
         PROGRAM_ENDED=False
         continue
