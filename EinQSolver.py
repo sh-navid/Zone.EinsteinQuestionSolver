@@ -9,11 +9,11 @@ import random
 #فکر نمیکنم چیزی رو جا انداخته باشم
 #من با این دیتا بصورت مستقیم کاری ندارم فقط بصورت کلی میخوام بدونم پارامترها چی هستن
 [
-    ["EN", "SU", "DN", "NR", "GR"],  ##ادم ها و ملیتشون
+    ["BR", "SW", "DN", "NR", "GR"],  ##ادم ها و ملیتشون
     ["GREEN", "WHITE", "RED", "BLUE", "YELLOW"],  ##رنگ خونه ها
     ["BIRD", "HORSE", "DOG", "CAT", "FISH"],  ##حیوانات خانگی
     ["BEER", "MILK", "COFFEE", "TEA",
-     "UNKNOWN"],  ##نوشیدنی ها، یدونه مشخص نبود اصلا
+     "WATER"],  ##نوشیدنی ها، یدونه مشخص نبود اصلا
     ["DH", "PR", "BL", "BM", "PM"]  ##برند سیگارها
 ]
 
@@ -26,8 +26,8 @@ rulesA = [
     #الان از جمله پایین منظورم اینه - مرد انگلیسی تو خونه قرمز قرار داره
     #و تو لیست راه حلها ملیت این مرد در ستون شماره 0 و رنگ خونش در
     #ستون شماره 1 باید قرار بگیره
-    "0_EN+1_RED",
-    "0_SU+2_DOG",
+    "0_BR+1_RED",
+    "0_SW+2_DOG",
     "0_DN+3_TEA",
     "1_GREEN+3_COFFEE",
     "4_PM+2_BIRD",
@@ -43,7 +43,7 @@ rulesA = [
     "2_HORSE=LR|4_DH",  #خونه ای که اسب داره سمت راست یا چپ خونه ای قرار داره که دان-هیل میکشه
     "1_GREEN=L|1_WHITE",  #خانه سبز سمت چپ خانه سفید قرار دارد
     "0_GR=LR|1_BLUE",
-    "4_BL=LR|3_BEER"
+    "4_BL=LR|3_WATER"
 ]
 
 
@@ -143,7 +143,7 @@ while not PROGRAM_ENDED:
     #دو خونه باقی مونده بود که باید آبی یا سفید باشد
     filler(["BLUE", "WHITE"], 1)
     filler(["HORSE", "CAT", "FISH"], 2)
-    filler(["UNKNOWN"], 3)
+    filler(["WATER"], 3)
     filler(["BL"], 4)
 
     print("________________")
@@ -158,6 +158,8 @@ while not PROGRAM_ENDED:
     #چند روزی حوصله نداشتم بنویسمش تا امروز
     #3/22/2021
 
+    #الان میخوام ببینم ایا این شرط برقراره یا نه
+    #خونه ای که بلندز میکشه سمت چپ یا راست خونه ای قرار داره که گربه داره
     rowA=find("BL",4)
     rowB=find("CAT",2)
     if abs(rowA-rowB) !=1:
@@ -176,14 +178,14 @@ while not PROGRAM_ENDED:
         PROGRAM_ENDED=False
         continue
 
-    rowA=find("GR",0)
+    rowA=find("NR",0)
     rowB=find("BLUE",1)
     if abs(rowA-rowB) !=1:
         PROGRAM_ENDED=False
         continue
 
     rowA=find("BL",4)
-    rowB=find("BEER",3)
+    rowB=find("WATER",3)
     if abs(rowA-rowB) !=1:
         PROGRAM_ENDED=False
         continue
