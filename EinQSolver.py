@@ -3,6 +3,9 @@
 #IF YOU NEED COMMENTS IN ENGLISH JUST TELL ME ON ONE OF MY ACCOUNTS OR SUBMIT AN ISSUE
 #نوشته شده توسط نوید شمشیرساز
 
+#Update rules from this link:
+#https://www.englishforums.com/English/EinsteinsRiddleFish/bhvj/post.htm
+
 import random
 #خب تصمیم گرفتم همون فارسی توضیح بدم خودم هم گیج نشم دارم چی مینویسم
 #این کل برداشت من از جملات انیشتین هست
