@@ -1,8 +1,9 @@
 #github.com/sh-navid
 #IF YOU NEED COMMENTS IN ENGLISH JUST TELL ME ON ONE OF MY ACCOUNTS OR SUBMIT AN ISSUE
 
-#Update rules from this link:
+#Update rules from these link:
 #https://www.englishforums.com/English/EinsteinsRiddleFish/bhvj/post.htm
+#https://www.beytoote.com/fun/enigma/puzzle-albert1-einstein.html
 
 import random
 #خب تصمیم گرفتم همون فارسی توضیح بدم خودم هم گیج نشم دارم چی مینویسم
